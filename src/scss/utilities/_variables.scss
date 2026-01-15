@@ -1,0 +1,34 @@
+@use "sass:map";
+@import url("https://use.typekit.net/spf3upy.css");
+
+$primary-color: #6C5CE7;
+$secondary-color: #ffffff;
+$accent-color: #26323814;
+$light-yellow: #FFEAA7;
+
+$dark-grey: #5C5C5C;
+$lighter-black: #2D3436;
+
+$dp-2: 0 4px 8px #26323814, 0 2px 4px #26323829;
+
+
+
+$size-class: (
+    "96": 96px,
+    "64": 64px,
+    "48": 48px,
+    "32": 32px,
+    "24": 24px,
+    "18": 18px,
+    "14": 14px,
+    "12": 12px
+);
+
+.example {
+  
+}
+@mixin font-class($size, $weight) {
+    font-family: "inter-variable",sans-serif;
+    font-variation-settings: 'wght' $weight, 'slnt' 0;
+    font-size: map.get($size-class, $size);
+}
