@@ -57,9 +57,9 @@ function generatePricingCards(cardContents) {
     cardContents.forEach( content => {
         template += `
             <article class="pricing-card">
-                <div>
+                <div class="heading">
                     <h3>${content.name}</h3>
-                    <h3>${content.badge}</h3>
+                    <p>${content.badge}</p>
                 </div>
                 <p>$${content.price} <span>${content.per}</span></p>
                 ${generateFeatureList(content.features)}

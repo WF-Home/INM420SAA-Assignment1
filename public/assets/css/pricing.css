@@ -46,5 +46,27 @@
   border-radius: 14px;
   box-shadow: 0 4px 8px rgba(38, 50, 56, 0.0784313725), 0 2px 4px rgba(38, 50, 56, 0.1607843137);
 }
+.pricing-card > .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing-card > .heading > h3 {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 700, "slnt" 0;
+  font-size: 18px;
+}
+.pricing-card > .heading > p {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 900, "slnt" 0;
+  font-size: 12px;
+  width: 90px;
+  height: 32px;
+  line-height: 32px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  border: 1px solid rgba(173, 173, 173, 0.6666666667);
+  border-radius: 25px;
+}
 
 /*# sourceMappingURL=pricing.css.map */
