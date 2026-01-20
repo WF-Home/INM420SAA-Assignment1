@@ -5,13 +5,18 @@ $primary-color: #6C5CE7;
 $secondary-color: #ffffff;
 $accent-color: #26323814;
 $light-yellow: #FFEAA7;
+$dark-yellow: #FDCB6E;
 
+$light-grey: #adadadaa;
 $dark-grey: #5C5C5C;
 $lighter-black: #2D3436;
+$red-highlight: #D63031;
+$blue-green-underline: #55EFC4;
 
 $dp-2: 0 4px 8px #26323814, 0 2px 4px #26323829;
+$text-shadow-white: 0 4px $secondary-color;
 
-
+// All the font sizes used on the figma design
 
 $size-class: (
     "96": 96px,
@@ -21,12 +26,10 @@ $size-class: (
     "24": 24px,
     "18": 18px,
     "14": 14px,
+    "13.5": 13.5px,
     "12": 12px
 );
 
-.example {
-  
-}
 @mixin font-class($size, $weight) {
     font-family: "inter-variable",sans-serif;
     font-variation-settings: 'wght' $weight, 'slnt' 0;

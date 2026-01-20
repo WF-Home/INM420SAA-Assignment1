@@ -1,0 +1,66 @@
+@import "utilities/variables";
+
+#services {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 15px 0;
+
+    > h2 {
+        @include font-class("24", 700);
+        line-height: 36px;
+        letter-spacing: 0.25;
+    }
+
+    > p {
+        @include font-class("18", 300);
+        line-height: 35px;
+    }
+}
+
+#services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    height: 273px;
+    gap: 7.5px;
+    margin-top: 40px;
+
+    > description {
+        > img {
+            width: 52.5px;
+            aspect-ratio: 1/1;
+            background-color: bisque;
+            border-radius: 8px;
+            margin-bottom: 18px
+        }
+
+        > h3 {
+            @include font-class("18", 700);
+            letter-spacing: 0.19px;
+            margin-bottom: 12px;
+        }
+
+        > p {
+            @include font-class("13.5", 400);
+            line-height: 12pxpx;
+        }
+    }
+
+    > button {
+        @include font-class("13.5", 700);
+        color: $primary-color;
+        width: 109.5px;
+        height: 36px;
+        border: 1px solid #adadadb6;
+        border-radius: 5px;
+        background-color: $secondary-color;
+    }
+}
+

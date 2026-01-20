@@ -1,0 +1,68 @@
+@import url("https://use.typekit.net/spf3upy.css");
+#services {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 15px 0;
+}
+#services > h2 {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 700, "slnt" 0;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.25;
+}
+#services > p {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 300, "slnt" 0;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+#services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  height: 273px;
+  gap: 7.5px;
+  margin-top: 40px;
+}
+.services-card > description > img {
+  width: 52.5px;
+  aspect-ratio: 1/1;
+  background-color: bisque;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.services-card > description > h3 {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 700, "slnt" 0;
+  font-size: 18px;
+  letter-spacing: 0.19px;
+  margin-bottom: 12px;
+}
+.services-card > description > p {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 400, "slnt" 0;
+  font-size: 13.5px;
+  line-height: 12pxpx;
+}
+.services-card > button {
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 700, "slnt" 0;
+  font-size: 13.5px;
+  color: #6C5CE7;
+  width: 109.5px;
+  height: 36px;
+  border: 1px solid rgba(173, 173, 173, 0.7137254902);
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=services.css.map */
