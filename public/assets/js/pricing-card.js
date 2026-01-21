@@ -61,7 +61,7 @@ function generatePricingCards(cardContents) {
                     <h3>${content.name}</h3>
                     <p>${content.badge}</p>
                 </div>
-                <p>$${content.price} <span>${content.per}</span></p>
+                <p>$${content.price} <span>/ ${content.per}</span></p>
                 ${generateFeatureList(content.features)}
                 <button>Learn more</button>
             </article>
