@@ -12,7 +12,8 @@ let pricingCardContents = [
             "Awesome Feather icons pack",
             "Themed into 3 different styles",
             "Will help to learn Figma"
-        ]
+        ],
+        "icon": "/assets/images/individual-check.svg"
     },
     {
         "name": "👤 Individual", 
@@ -25,7 +26,8 @@ let pricingCardContents = [
             "Awesome Feather icons pack",
             "Themed into 3 different styles",
             "Will help to learn Figma"
-        ]
+        ],
+        "icon": "/assets/images/individual-check.svg"
     },
     {
         "name": "👤 Individual", 
@@ -38,7 +40,8 @@ let pricingCardContents = [
             "Awesome Feather icons pack",
             "Themed into 3 different styles",
             "Will help to learn Figma"
-        ]
+        ],
+        "icon": "/assets/images/individual-check.svg"
     },
 ];
 
@@ -62,7 +65,7 @@ function generatePricingCards(cardContents) {
                     <p>${content.badge}</p>
                 </div>
                 <p>$${content.price} <span>/ ${content.per}</span></p>
-                ${generateFeatureList(content.features)}
+                ${generateFeatureList(content.features, content.icon)}
                 <button>Learn more</button>
             </article>
         `
@@ -71,14 +74,14 @@ function generatePricingCards(cardContents) {
     return template;
 }
 
-function generateFeatureList(features) {
+function generateFeatureList(features, icon) {
 
     let template = `<ul>`;
 
     features.forEach( feature => {
         template += `
             <li>
-                <img>
+                <img src="${icon}">
                 <p>${feature}</p>
             </li>
         `

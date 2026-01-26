@@ -32,14 +32,16 @@
 }
 #hero > h1 > #second-line > .highlighted {
   color: #D63031;
+  anchor-name: --highlight;
 }
 #hero > h1 > #second-line > .highlighted::after {
   content: "";
   position: absolute;
   border-radius: 20px;
-  bottom: -3px;
-  left: -5px;
-  height: 30px;
+  position-anchor: --highlight;
+  position-area: center center;
+  transform: translate(-5px, 20px);
+  height: 20px;
   width: 95px;
   background: #55EFC4;
   z-index: -1;

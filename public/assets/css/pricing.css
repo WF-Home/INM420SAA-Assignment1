@@ -19,13 +19,15 @@
 }
 #pricing > p > .highlighted {
   color: #6C5CE7;
+  anchor-name: --priceHighlight;
 }
 #pricing > p > .highlighted::after {
   content: "";
   position: absolute;
+  position-anchor: --priceHighlight;
+  position-area: center center;
+  transform: translate(0px, 10px);
   border-radius: 20px;
-  bottom: -3px;
-  left: 78px;
   height: 10px;
   width: 95px;
   background: #FDCB6E;
@@ -86,6 +88,18 @@
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 400, "slnt" 0;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pricing-card > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pricing-card > ul > li > img {
+  width: 16px;
+  height: 16px;
 }
 .pricing-card > button {
   font-family: "inter-variable", sans-serif;

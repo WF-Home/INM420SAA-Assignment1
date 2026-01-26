@@ -17,13 +17,15 @@
 
         > .highlighted {
                 color: $primary-color;
+                anchor-name: --priceHighlight;
 
                 &::after {
                     content: '';
                     position: absolute;
+                    position-anchor: --priceHighlight;
+                    position-area: center center;
+                    transform: translate(0px, 10px);
                     border-radius: 20px;
-                    bottom: -3px;
-                    left: 78px;
                     height: 10px;
                     width: 95px;
                     background: $dark-yellow;
@@ -82,6 +84,20 @@
 
     > ul {
         @include font-class("14", 400);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        > li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            > img {
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
 
     > button {
@@ -93,6 +109,4 @@
         background-color: $primary-color;
         color: $secondary-color;
     }
-
-
 }

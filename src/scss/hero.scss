@@ -30,14 +30,16 @@
 
              > .highlighted {
                 color: $red-highlight;
+                anchor-name: --highlight;
 
                 &::after {
                     content: '';
                     position: absolute;
                     border-radius: 20px;
-                    bottom: -3px;
-                    left: -5px;
-                    height: 30px;
+                    position-anchor: --highlight;
+                    position-area: center center;
+                    transform: translate(-5px, 20px);
+                    height: 20px;
                     width: 95px;
                     background: $blue-green-underline;
                     z-index: -1;
