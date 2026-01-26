@@ -70,4 +70,52 @@
   background-color: #ffffff;
 }
 
+@media (min-width: 992px) {
+  #services {
+    margin: 135px 80px;
+  }
+  #services > h2 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 32px;
+  }
+  #services > p {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 300, "slnt" 0;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 36px;
+    width: 80%;
+  }
+  .services-card {
+    width: 270px;
+    height: 330px;
+  }
+  .services-card > description > .icon-container {
+    width: 70px;
+  }
+  .services-card > description > h3 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 24px;
+    letter-spacing: 0.19px;
+    margin-bottom: 12px;
+  }
+  .services-card > description > p {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 400, "slnt" 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .services-card > button {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 18px;
+    color: #6C5CE7;
+    width: 146px;
+    height: 48px;
+    border-radius: 13px;
+  }
+}
+
 /*# sourceMappingURL=services.css.map */

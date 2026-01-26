@@ -65,3 +65,34 @@
         background-color: #ffffffbd;
     }
 }
+
+@media (min-width: 992px) {
+    #hero {
+
+        > h1 {
+            @include font-class("96", 900);
+            width: 1000px;
+
+            > #second-line {
+                @include font-class("96", 900);
+
+                > .highlighted {
+
+                    &::after {
+                        transform: translate(-8px, 35px);
+                        height: 35px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            > #third-line {
+                @include font-class("64", 700);
+            }
+        }
+
+        > #arrow-down-icon {
+            display: none;
+        }
+    }
+}

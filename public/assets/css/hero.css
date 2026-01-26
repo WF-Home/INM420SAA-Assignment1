@@ -64,4 +64,31 @@
   background-color: rgba(255, 255, 255, 0.7411764706);
 }
 
+@media (min-width: 992px) {
+  #hero > h1 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 900, "slnt" 0;
+    font-size: 96px;
+    width: 1000px;
+  }
+  #hero > h1 > #second-line {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 900, "slnt" 0;
+    font-size: 96px;
+  }
+  #hero > h1 > #second-line > .highlighted::after {
+    transform: translate(-8px, 35px);
+    height: 35px;
+    width: 200px;
+  }
+  #hero > h1 > #third-line {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 64px;
+  }
+  #hero > #arrow-down-icon {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=hero.css.map */
