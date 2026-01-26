@@ -33,12 +33,18 @@
     margin-top: 40px;
 
     > description {
-        > img {
+        > .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 52.5px;
             aspect-ratio: 1/1;
-            background-color: bisque;
-            border-radius: 8px;
-            margin-bottom: 18px
+            border-radius: 50%;
+            margin-bottom: 18px;
+
+            > img {
+                width: 85%;
+            }
         }
 
         > h3 {

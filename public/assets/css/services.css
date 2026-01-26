@@ -33,12 +33,17 @@
   gap: 7.5px;
   margin-top: 40px;
 }
-.services-card > description > img {
+.services-card > description > .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 52.5px;
   aspect-ratio: 1/1;
-  background-color: bisque;
-  border-radius: 8px;
+  border-radius: 50%;
   margin-bottom: 18px;
+}
+.services-card > description > .icon-container > img {
+  width: 85%;
 }
 .services-card > description > h3 {
   font-family: "inter-variable", sans-serif;

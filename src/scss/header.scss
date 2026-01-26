@@ -10,10 +10,39 @@ header {
     height: 72px;
     color: $dark-grey;
     box-shadow: $dp-2;
+    z-index: 999;
+    anchor-name: --header;
 
     > nav {
-        position: absolute;
         display: none;
+        position: absolute;
+        position-anchor: --header;
+        position-area: bottom center;
+        z-index: 998;
+
+      &.isDisplayed {
+        display: block;
+      }
+
+      > ul {
+        width: 100vw;
+
+        > li {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $secondary-color;
+            border-bottom: $light-grey 1px solid;
+
+            > a {
+                @include font-class("18", 400);
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+      }
     }
 
     > button {
