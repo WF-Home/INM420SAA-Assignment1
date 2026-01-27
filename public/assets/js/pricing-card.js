@@ -2,24 +2,23 @@
 
 let pricingCardContents = [
     {
-        "name": "👤 Individual", 
-        "badge": "BEST!", 
-        "price": 24,
-        "per": "month",
+        "name": "Free", 
+        "badge": "Fine!", 
+        "price": "Free",
+        "per": "FOREVER",
         "features": [
             "Components-driven system",
             "Sales-boosting landing pages",
-            "Awesome Feather icons pack",
-            "Themed into 3 different styles",
-            "Will help to learn Figma"
+            "Awesome Feather icons pack"
         ],
-        "icon": "/assets/images/individual-check.svg"
+        "icon": "/assets/images/free-check.svg",
+        "cta": "Try for free"
     },
     {
         "name": "👤 Individual", 
         "badge": "BEST!", 
         "price": 24,
-        "per": "month",
+        "per": "MONTH",
         "features": [
             "Components-driven system",
             "Sales-boosting landing pages",
@@ -27,22 +26,24 @@ let pricingCardContents = [
             "Themed into 3 different styles",
             "Will help to learn Figma"
         ],
-        "icon": "/assets/images/individual-check.svg"
+        "icon": "/assets/images/individual-check.svg",
+        "cta": "Regular license",
+        "isFeatured": true
     },
     {
-        "name": "👤 Individual", 
-        "badge": "BEST!", 
-        "price": 24,
-        "per": "month",
+        "name": "👥 Corporate", 
+        "badge": "Wow!", 
+        "price": 12,
+        "per": "EDITOR",
         "features": [
             "Components-driven system",
             "Sales-boosting landing pages",
             "Awesome Feather icons pack",
-            "Themed into 3 different styles",
-            "Will help to learn Figma"
+            "Themed into 3 different styles"
         ],
-        "icon": "/assets/images/individual-check.svg"
-    },
+        "icon": "/assets/images/corporate-check.svg",
+        "cta": "Extended license"
+    }
 ];
 
 // Service card generator
@@ -59,14 +60,16 @@ function generatePricingCards(cardContents) {
 
     cardContents.forEach( content => {
         template += `
-            <article class="pricing-card">
-                <div class="heading">
-                    <h3>${content.name}</h3>
-                    <p>${content.badge}</p>
-                </div>
-                <p>$${content.price} <span>/ ${content.per}</span></p>
-                ${generateFeatureList(content.features, content.icon)}
-                <button>Learn more</button>
+            <article class="pricing-card ${content.isFeatured ? "featured": ""}">
+                <description>
+                    <div class="heading">
+                        <h3>${content.name}</h3>
+                        <p>${content.badge}</p>
+                    </div>
+                    <p>$${content.price} <span>/ ${content.per}</span></p>
+                    ${generateFeatureList(content.features, content.icon)}
+                </description>
+                <button>${content.cta}</button>
             </article>
         `
     });

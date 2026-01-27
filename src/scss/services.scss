@@ -72,7 +72,7 @@
 
 @media (min-width: 992px) {
     #services {
-        margin: 135px 80px;
+        margin: 80px 135px;
 
         > h2 {
             @include font-class("32", 700);

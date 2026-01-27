@@ -4,10 +4,10 @@ let header = document.getElementById("header");
 
 header.innerHTML = generateHeader();
 
-let logoGroup = document.getElementById("logo-group");
+let burger = document.getElementById("burger");
 let nav = document.getElementById("navigation");
 
-logoGroup.addEventListener("click", function() {
+burger.addEventListener("click", function() {
     if (nav.classList.contains("isDisplayed")) {
        nav.classList.remove("isDisplayed"); 
     } else {
@@ -20,7 +20,8 @@ logoGroup.addEventListener("click", function() {
 function generateHeader() {
     let template = `
         <div id="logo-group">
-            <img src="/assets/images/icon-menu.svg">
+            <img id="grid-icon" src="/assets/images/icon-grid.svg">
+            <img id="burger" src="/assets/images/icon-menu.svg">
             <h1>Grid</h1>
         </div>
         <nav id="navigation">
@@ -46,7 +47,18 @@ function generateNav() {
     let template = `<ul>`
 
     navLinks.forEach( link => {
-        template += `<li><a href="">${link}</a></li>`
+        template += `
+            <li><a href="">${link}</a></li>
+        `
+        if (link !== "Contact us") {
+            template += `
+                <li class="navGraphic">
+                    <svg>
+                        <circle>
+                    </svg>
+                </li>
+            `
+        }
     })
 
     template += `</ul>`

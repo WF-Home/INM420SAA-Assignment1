@@ -64,4 +64,82 @@ header > #logo-group > img {
   aspect-ratio: 1/1;
 }
 
+#grid-icon {
+  display: none;
+}
+
+#burger {
+  display: inline;
+}
+
+.navGraphic {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  header {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 48px;
+    height: 96px;
+    color: black;
+    justify-content: space-around;
+  }
+  header > nav {
+    display: flex;
+    position: relative;
+    max-width: 50%;
+  }
+  header > nav > ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header > nav > ul > li {
+    border: none;
+  }
+  header > nav > ul > li > a {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 400, "slnt" 0;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    color: #6C5CE7;
+  }
+  header > nav > ul > li > a:hover {
+    color: black;
+    font-weight: 900;
+  }
+  header > nav > ul > li > svg {
+    width: 9px;
+    height: 100%;
+  }
+  header > nav > ul > li > svg > circle {
+    r: 3;
+    cx: 50%;
+    cy: 50%;
+    fill: #FDCB6E;
+  }
+  header > #logo-group > img {
+    width: 70px;
+    aspect-ratio: 1/1;
+  }
+  header > button {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 24px;
+    width: 170px;
+    height: 64px;
+    border-radius: 40px;
+  }
+  #grid-icon {
+    display: inline;
+  }
+  #burger {
+    display: none;
+  }
+  .navGraphic {
+    display: inline;
+    width: 9px;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */

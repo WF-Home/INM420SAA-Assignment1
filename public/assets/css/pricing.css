@@ -50,17 +50,21 @@
   border-radius: 14px;
   box-shadow: 0 4px 8px rgba(38, 50, 56, 0.0784313725), 0 2px 4px rgba(38, 50, 56, 0.1607843137);
 }
-.pricing-card > .heading {
+.pricing-card > description {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card > description > .heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.pricing-card > .heading > h3 {
+.pricing-card > description > .heading > h3 {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 700, "slnt" 0;
   font-size: 18px;
 }
-.pricing-card > .heading > p {
+.pricing-card > description > .heading > p {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 900, "slnt" 0;
   font-size: 12px;
@@ -72,32 +76,34 @@
   border: 1px solid rgba(173, 173, 173, 0.6666666667);
   border-radius: 25px;
 }
-.pricing-card > p {
+.pricing-card > description > p {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 700, "slnt" 0;
   font-size: 24px;
   color: #6C5CE7;
+  margin-top: 10px;
 }
-.pricing-card > p > span {
+.pricing-card > description > p > span {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 800, "slnt" 0;
   font-size: 12px;
   letter-spacing: 2.5px;
 }
-.pricing-card > ul {
+.pricing-card > description > ul {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "wght" 400, "slnt" 0;
   font-size: 14px;
   display: flex;
   flex-direction: column;
+  margin-top: 14px;
   gap: 24px;
 }
-.pricing-card > ul > li {
+.pricing-card > description > ul > li {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.pricing-card > ul > li > img {
+.pricing-card > description > ul > li > img {
   width: 16px;
   height: 16px;
 }
@@ -111,6 +117,95 @@
   border: none;
   background-color: #6C5CE7;
   color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  #pricing {
+    text-align: center;
+    margin: 80px 135px;
+  }
+  #pricing > h2 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 64px;
+  }
+  #pricing > p {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 400, "slnt" 0;
+    font-size: 32px;
+    margin-top: 34px;
+  }
+  #pricing > p > .highlighted::after {
+    transform: translate(0px, 13px);
+    border-radius: 20px;
+    height: 15px;
+    width: 130px;
+  }
+  #pricing-cards-container {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 24px;
+  }
+  .pricing-card {
+    text-align: left;
+    width: 370px;
+    height: 536px;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+  .pricing-card > description {
+    gap: 10px;
+  }
+  .pricing-card > description > .heading > h3 {
+    color: #6C5CE7;
+  }
+  .pricing-card > description > .heading > p {
+    display: none;
+  }
+  .pricing-card > description > p {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 48px;
+    color: black;
+  }
+  .pricing-card > description > ul {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 300, "slnt" 0;
+    font-size: 18px;
+  }
+  .pricing-card > description > ul > li {
+    gap: 16px;
+  }
+  .pricing-card > description > ul > li > img {
+    width: 32px;
+    height: 32px;
+  }
+  .pricing-card > button {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 18px;
+    width: 306px;
+    height: 64px;
+    border-radius: 18px;
+    border: rgba(173, 173, 173, 0.6666666667) 1px solid;
+    background-color: #ffffff;
+    color: #6C5CE7;
+  }
+  .pricing-card.featured {
+    box-shadow: 0 4px 8px rgba(38, 50, 56, 0.0784313725), 0 2px 4px rgba(38, 50, 56, 0.1607843137);
+  }
+  .pricing-card.featured > .heading > p {
+    display: block;
+  }
+  .pricing-card.featured > button {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "wght" 700, "slnt" 0;
+    font-size: 24px;
+    border: none;
+    background-color: #6C5CE7;
+    color: #ffffff;
+  }
 }
 
 /*# sourceMappingURL=pricing.css.map */

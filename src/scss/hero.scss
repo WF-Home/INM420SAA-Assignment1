@@ -1,6 +1,8 @@
 @import "utilities/variables";
 
 #hero {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 420px;
     overflow: hidden;
@@ -16,6 +18,7 @@
         line-height: 100%;
         letter-spacing: -1px;
         text-shadow: $text-shadow-white;
+        anchor-name: --hero-text;
 
         position: absolute;
         top: 38%;
@@ -68,10 +71,14 @@
 
 @media (min-width: 992px) {
     #hero {
+        background-image: url("/assets/images/desktop-bg.svg");
+        background-position: center;
+        height: 950px;
 
         > h1 {
             @include font-class("96", 900);
             width: 1000px;
+            top: 15%;
 
             > #second-line {
                 @include font-class("96", 900);

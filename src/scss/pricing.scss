@@ -51,51 +51,58 @@
     border-radius: 14px;
     box-shadow: $dp-2;
 
-    > .heading {
+    > description {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
 
-        > h3 {
-            @include font-class("18", 700);
+        > .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > h3 {
+                @include font-class("18", 700);
+            }
+
+            > p {
+                @include font-class("12", 900);
+                width: 90px;
+                height: 32px;
+                line-height: 32px;
+                letter-spacing: 2.5px;
+                text-align: center;
+                border: 1px solid $light-grey;
+                border-radius: 25px;
+            }
         }
 
         > p {
-            @include font-class("12", 900);
-            width: 90px;
-            height: 32px;
-            line-height: 32px;
-            letter-spacing: 2.5px;
-            text-align: center;
-            border: 1px solid $light-grey;
-            border-radius: 25px;
+            @include font-class("24", 700);
+            color: $primary-color;
+            margin-top: 10px;
+
+            > span {
+                @include font-class("12", 800);
+                letter-spacing: 2.5px;
+            }
         }
-    }
 
-    > p {
-        @include font-class("24", 700);
-        color: $primary-color;
-
-        > span {
-            @include font-class("12", 800);
-            letter-spacing: 2.5px;
-        }
-    }
-
-    > ul {
-        @include font-class("14", 400);
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        > li {
+        > ul {
+            @include font-class("14", 400);
             display: flex;
-            align-items: center;
-            gap: 8px;
+            flex-direction: column;
+            margin-top: 14px;
+            gap: 24px;
 
-            > img {
-                width: 16px;
-                height: 16px;
+            > li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                > img {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }
@@ -108,5 +115,106 @@
         border: none;
         background-color: $primary-color;
         color: $secondary-color;
+    }
+}
+
+
+@media (min-width: 992px) {
+    #pricing {
+        text-align: center;
+        margin: 80px 135px;
+
+        > h2 {
+            @include font-class("64", 700);
+        }
+
+        > p {
+            @include font-class("32", 400);
+            margin-top: 34px;
+
+        > .highlighted {
+
+                &::after {
+                    transform: translate(0px, 13px);
+                    border-radius: 20px;
+                    height: 15px;
+                    width: 130px;
+                }
+        }
+    }
+    }
+
+    #pricing-cards-container {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 24px;
+    }
+
+    .pricing-card {
+        text-align: left;
+        width: 370px;
+        height: 536px;
+        justify-content: space-between;
+        box-shadow: none;
+
+        > description {
+            gap: 10px;
+
+            > .heading {
+                > h3 {
+                    color: $primary-color;
+                } 
+
+                > p {
+                    display: none;
+                }
+            }
+
+            > p {
+                @include font-class("48", 700);
+                color: black;
+            }
+
+            > ul {
+                @include font-class("18", 300);
+                
+                > li {
+                    gap: 16px;
+
+                    > img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+
+        > button {
+            @include font-class("18", 700);
+            width: 306px;
+            height: 64px;
+            border-radius: 18px;
+            border: $light-grey 1px solid;
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+    }
+
+    .pricing-card.featured {
+        box-shadow: $dp-2;
+
+        > .heading {
+            > p {
+                display: block;
+            }
+        }
+
+        > button {
+            @include font-class("24", 700);
+            border: none;
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
     }
 }

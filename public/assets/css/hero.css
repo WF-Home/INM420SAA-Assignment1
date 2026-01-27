@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/spf3upy.css");
 #hero {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 420px;
   overflow: hidden;
@@ -17,6 +19,7 @@
   line-height: 100%;
   letter-spacing: -1px;
   text-shadow: 0 4px #ffffff;
+  anchor-name: --hero-text;
   position: absolute;
   top: 38%;
   left: 50%;
@@ -65,11 +68,17 @@
 }
 
 @media (min-width: 992px) {
+  #hero {
+    background-image: url("/assets/images/desktop-bg.svg");
+    background-position: center;
+    height: 950px;
+  }
   #hero > h1 {
     font-family: "inter-variable", sans-serif;
     font-variation-settings: "wght" 900, "slnt" 0;
     font-size: 96px;
     width: 1000px;
+    top: 15%;
   }
   #hero > h1 > #second-line {
     font-family: "inter-variable", sans-serif;
