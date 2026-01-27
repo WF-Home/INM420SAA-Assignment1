@@ -9,24 +9,42 @@ footer.innerHTML = generateFooter();
 function generateFooter() {
     return `
         <section id="mobileFooterContent">
-            ${generateInfoSection()}
+            ${generateMobileFooterSection()}
+        </section>
+        <section id="desktopFooterContent">
+            ${generateDesktopInfoSection()}
             ${generateContactSection()}
+        </section>
+    `
+}
+
+// Generate mobile footer
+
+function generateMobileFooterSection() {
+    return `
+        <p class="copy">Copyright © 2018 • Your Company</p>
+        <p class="copy">All rights reserved</p>
+        <p class="made">Made in Setproduct.com</p> 
+        <p class="made">One man digital agency</p>
+        <p class="email">hello@setproduct.com</p>
+        <section id="socials-container">
+        ${generateSocials("mobile")}
         </section>
     `
 }
 
 // Generate Info Section
 
-function generateInfoSection() {
+function generateDesktopInfoSection() {
     return `
     <section id="infoSection">
-        ${generateSocials()}
+        ${generateSocials("desktop")}
         ${generateInfomationLinks()}
     </section>
     `
 }
 
-function generateSocials() {
+function generateSocials(layout) {
     let socials = [
         "facebook",
         "linkedin",
@@ -34,17 +52,27 @@ function generateSocials() {
         "twitter"
     ]
 
-    let template = `
+    let template = ``
+
+    if (layout === "desktop") {
+
+        template += `
         <section id="socials">
             <h2>FOLLOW US</h2>
             <section id="socials-container">
-    `
+        `
 
-    socials.forEach( social => {
-        template += `<img src="/assets/images/icon-${social}.svg" alt="${social} logo">`
-    })
+        socials.forEach( social => {
+            template += `<img src="/assets/images/icon-${social}.svg" alt="${social} logo">`
+        })
 
-    template += `</section></section>`
+        template += `</section></section>`
+    } else {
+        socials.forEach( social => {
+            template += `<img src="/assets/images/icon-${social}.svg" alt="${social} logo">`
+        })
+    }
+
 
     return template
 }

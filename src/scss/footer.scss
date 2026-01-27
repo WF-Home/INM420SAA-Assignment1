@@ -3,11 +3,43 @@
 footer {
     width: 100%;
 }
+
 #mobileFooterContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px;
+    text-align: center;
+    background-image: url("/assets/images/mobile-footer.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .copy {
+        @include font-class("14", 400);
+    }
+
+    .made {
+        @include font-class("12", 300);
+        color: $dark-green;
+    }
+
+    .email {
+        @include font-class("18", 600);
+        color: $primary-color
+    }
+
+    > #socials-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10px;
+    }
+}
+
+#desktopFooterContent {
     display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 600px) {
     footer {
         width: 100%;
         height: 426px;
@@ -18,11 +50,15 @@ footer {
     }
 
     #mobileFooterContent {
+        display: none;
+    }
+
+    #desktopFooterContent {
         @include font-class("12", 700);
         color: $light-grey;
         letter-spacing: 2.5px;
         display: flex;
-        width: 1170px;
+        width: calc(100% - 270px);
         margin: 80px 135px 135px;
 
         h2 {

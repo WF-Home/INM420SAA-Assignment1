@@ -119,7 +119,7 @@
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 600px) {
     #pricing {
         text-align: center;
         margin: 80px 135px;
@@ -203,6 +203,7 @@
 
     .pricing-card.featured {
         box-shadow: $dp-2;
+        anchor-name: --featured;
 
         > .heading {
             > p {
